@@ -274,7 +274,8 @@ function getMensajes() {
     fetch('api')
         .then( res => res.json() )
         .then( posts => {
-
+		
+	    console.log(post);
 
             posts.forEach( post => 
                 crearMensajeHTML( post.mensaje, post.user, post.lat, post.lng, post.foto ));
